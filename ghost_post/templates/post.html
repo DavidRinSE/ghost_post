@@ -1,0 +1,13 @@
+<h1>{{ post.isBoast|yesno:"Boast,Roast"}}</h1>
+<h3>{{ post.content }}</h3>
+<p>{{ post.upVotes }} <a href="/upvote/{{ post.id }}/">up votes</a> || {{ post.downVotes }} <a href="/downvote/{{ post.id }}/">down votes</a></p>
+<p>{{ post.date }}</p>
+<p>
+    {% if last_post %}
+        <a href="/post/{{ last_post }}/">Last</a> ||
+    {% endif %}
+    <a href="{{ homepage }}">Home</a>
+    {% if next_post %}
+         || <a href="/post/{{ next_post }}/">Next</a>
+    {% endif %}
+</p>

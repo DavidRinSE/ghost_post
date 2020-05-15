@@ -1,1 +1,12 @@
 <h1>👻GhostPost 👻</h1>
+<a href="/newpost/">New Post</a>
+{% for post in posts %}
+    <div>
+        <a href="/post/{{post.id}}"><h3>{{ post.content }}</h3></a>
+        <ul>
+            <li>{{ post.isBoast|yesno:"Boast,Roast"}}</li>
+            <li>{{ post.date }}</li>
+        </ul>
+    </div>
+{% endfor %}
+<p>Filters: <a href="/boasts/">Boasts</a> || <a href="/boasts/">Roasts</a> || <a href="/score/">Score</a> || <a href="/">None</a></p>
