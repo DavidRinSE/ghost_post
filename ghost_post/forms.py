@@ -7,11 +7,3 @@ class PostForm(forms.Form):
         (False, "Roast"),
     ))
     post = forms.CharField(widget=forms.Textarea, max_length=280)
-
-
-
-# isBoast = models.BooleanField()
-# content = models.CharField(max_length=280)
-# upVotes = models.IntegerField()
-# downVotes = models.IntegerField()
-# date = models.DateTimeField(default=timezone.now)
